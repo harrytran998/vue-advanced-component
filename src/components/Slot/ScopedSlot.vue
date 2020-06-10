@@ -1,6 +1,6 @@
 <template>
-  <span>
-    <slot :user="user" class="name">{{ user.lastName }}</slot>
+  <span class="text-xl text-red-600">
+    <slot :user="user">{{ user.lastName }}</slot>
   </span>
 </template>
 
@@ -15,9 +15,3 @@ export default {
   }),
 }
 </script>
-
-<style>
-.name {
-  font-size: 2.5rem;
-}
-</style>

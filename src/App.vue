@@ -1,20 +1,21 @@
 <template>
   <div id="app">
-    <date-picker
+    <!-- <date-picker
       v-model="date"
       format="DD-MM-YYYY"
       :options="{ firstDay: 2 }"
-    />
+    /> -->
+    <test-scoped-slot></test-scoped-slot>
   </div>
 </template>
 
 <script>
-import DatePicker from './components/common/DatePicker.vue'
-
+// import DatePicker from './components/common/DatePicker.vue'
+import TestScopedSlot from './components/Slot/TestSlot'
 export default {
   name: 'App',
   components: {
-    DatePicker,
+    TestScopedSlot,
   },
   data: () => ({
     date: '10-10-2020',

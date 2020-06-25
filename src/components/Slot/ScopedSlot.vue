@@ -1,6 +1,9 @@
 <template>
   <span class="text-xl text-red-600">
-    <slot name="name" :user="user"></slot>
+    <slot name="name" :user="user">
+      <!-- fallback content -->
+      {{ getFullName() }}
+    </slot>
     <slot name="age" :user="user"></slot>
   </span>
 </template>
@@ -14,6 +17,11 @@ export default {
       lastName: "Boy",
       age: 20
     }
-  })
+  }),
+  methods: {
+    getFullName() {
+      return this.user.firstName + this.user.lastName;
+    }
+  }
 };
 </script>

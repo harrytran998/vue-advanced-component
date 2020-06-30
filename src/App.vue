@@ -4,23 +4,20 @@
       v-model="date"
       format="DD-MM-YYYY"
       :options="{ firstDay: 2 }"
-    /> -->
-    <test-scoped-slot></test-scoped-slot>
+    />-->
+    <!-- <test-scoped-slot></test-scoped-slot> -->
+    <parent-base-input></parent-base-input>
   </div>
 </template>
 
 <script>
 // import DatePicker from './components/common/DatePicker.vue'
-import TestScopedSlot from './components/Slot/TestSlot'
+import ParentBaseInput from "./components/EdgeCases/ParentBaseInput";
 export default {
-  name: 'App',
   components: {
-    TestScopedSlot,
-  },
-  data: () => ({
-    date: '10-10-2020',
-  }),
-}
+    ParentBaseInput
+  }
+};
 </script>
 
 <style>
